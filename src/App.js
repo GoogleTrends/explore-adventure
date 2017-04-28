@@ -33,7 +33,7 @@ var svgWidth = !isMobilePhone ? width * 0.7 : width;
 var imgWidth = !isMobilePhone ? width * 0.3 : width;
 var contentWidth = !isMobilePhone ? width * 0.6 : width;
 var dotSize = 9;
-var url = 'http://ec2-52-53-81-155.us-west-1.compute.amazonaws.com';
+var url = 'http://104.198.104.144';
 var md = new Remarkable({linkTarget: '_new', html: true});
 
 class App extends Component {
