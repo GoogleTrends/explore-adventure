@@ -75,7 +75,9 @@ class Intro extends Component {
       color: '#fff',
       backgroundColor: this.props.colors.blue,
       backgroundImage: 'url("' + airplane_img + '")',
-      backgroundSize: '1000px',
+      backgroundSize: !this.props.isMobilePhone ? '1000px' : '500px',
+      backgroundPosition: !this.props.isMobilePhone ? '' :  'center 360px',
+      backgroundRepeat: !this.props.isMobilePhone ? '' : 'no-repeat',
       // boxShadow: '0 0 10px #cfcfcf',
     };
     var animateDivStyle = {
