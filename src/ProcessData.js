@@ -82,7 +82,7 @@ var ProcessData = {
     });
 
     // and then only take the top 25
-    var top = !isMobile.phone ? 31 : 9;
+    var top = !isMobile.any ? 31 : isMobile.tablet ? 20 : 9;
     // shim in uk bc simon
     var uk = _.find(countries, country => country.country_code === 826);
     uk = uk ? [uk] : [];

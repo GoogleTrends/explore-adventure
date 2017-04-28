@@ -26,7 +26,7 @@ var colors = {
   gray: '#333',
 };
 
-var isMobilePhone = isMobile.phone;
+var isMobilePhone = isMobile.any;
 var margin = {top: 20, left: 20};
 var width = !isMobilePhone ? 1000 : window.innerWidth - 2 * margin.left;
 var svgWidth = !isMobilePhone ? width * 0.7 : width;
