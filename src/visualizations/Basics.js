@@ -11,7 +11,7 @@ var scenePadding = 75;
 var margin = {top: 20, left: 20};
 var spacing = 5;
 var fontSize = 12;
-var textWidth = 100;
+var textWidth = 75;
 
 var scenes = ['one', 'two', 'three'];
 var annotations = [];
@@ -225,7 +225,7 @@ class Basics extends Component {
 
     this.blocks = this.blocks.enter().append('g')
       .merge(this.blocks)
-      .attr('transform', d => 'translate(' + [textWidth - spacing, d.y] + ')');
+      .attr('transform', d => 'translate(' + [textWidth, d.y] + ')');
 
     this.blocks.selectAll('rect')
       .data(d => d.blocks).enter().append('rect')
