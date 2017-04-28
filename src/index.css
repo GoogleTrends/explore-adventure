@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("./font/LibreBaskerville-Regular.ttf");
+}
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("./font/LibreBaskerville-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("./font/LibreBaskerville-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+  font-family: "CatMule Caps";
+  src: url("./font/CatMule-Caps.otf");
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 2;
+}
+
+h1, h2, .header {
+  font-family: 'CatMule Caps';
+}
+
+text {
+  font-family: Courier, sans-serif;
+  shape-rendering: crispEdges;
+}
+
+g.annotation-connector {
+  stroke: #666;
+  fill: none;
+  shape-rendering: crispEdges;
+}
+
+g.annotation path.connector-arrow {
+  fill: #666;
+}
+
+g.annotation-subject {
+  stroke: #666;
+  fill: none;
+}
+
+rect.annotation-note-bg {
+  fill: rgba(255, 255, 255, 0);
+}
+
+text.annotation-note-label {
+  fill: #666;
+}
+text.annotation-note-title {
+  fill: #666;
+  font-weight: 600;
+}
+
+.axis path, .axis line {
+  stroke: #999;
+}
+
+.axis text {
+  fill: #999;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  border-bottom: 1px dashed;
+}
+
+.Intro a, .Footer a, #explore a {
+  color: #fff;
+}
+
+.Select {
+  display: inline-block;
+  width: 250px;
+  font-size: 22px;
+}
