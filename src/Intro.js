@@ -6,8 +6,8 @@ import 'gsap/TextPlugin';
 import google_logo from './images/google_logo.svg';
 import airplane_img from './images/airplane.jpg';
 
-var duration = 1;
-var y = 50;
+var duration = 1.5;
+var y = 100;
 
 class Intro extends Component {
 
@@ -58,12 +58,12 @@ class Intro extends Component {
     this.timeline
       .fromTo(this.refs.animate1, duration / 4,
         {x: -width1 / 2, y: 0, opacity: 1, text: text1, color: color1},
-        {x: -width1 / 2, y: -1 * y, opacity: 0, text: text1, color: color1},
+        {x: -width1 / 2, y: y / 2, opacity: 0, text: text1, color: color1},
         label + '+=' + duration * 0.75
       );
     this.timeline
       .fromTo(this.refs.animate2, duration / 4,
-        {x: -width2 / 2, y: y, opacity: 0, text: text2, color: color2},
+        {x: -width2 / 2, y: -y, opacity: 0, text: text2, color: color2},
         {x: -width2 / 2, y: 0, opacity: 1, text: text2, color: color2},
         label + '+=' + duration * 0.75
       );
@@ -80,7 +80,7 @@ class Intro extends Component {
     };
     var animateDivStyle = {
       position: 'relative',
-      margin: 20,
+      margin: 10,
       height: 36,
     }
     var animateStyle = {
@@ -89,16 +89,18 @@ class Intro extends Component {
       // width: '100%',
       backgroundColor: 'rgba(255, 255, 255, 1)',
       padding: '5px 10px',
+      fontFamily: 'Courier',
     };
     var hideStyle = {
       position: 'absolute',
       display: 'inline-block',
       padding: '5px 10px',
       visibility: 'hidden',
+      fontFamily: 'Courier',
     }
     var headerStyle = {
       fontSize: 42,
-      marginBottom: 0,
+      margin: 0,
       lineHeight: 1.6,
     };
     var logoHeight = 36;
