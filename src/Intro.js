@@ -139,7 +139,7 @@ class Intro extends Component {
         {animateDiv}
         <h1 style={headerStyle}>
           <span style={backgroundStyle}>
-            Adventure is out there!
+            Explore Adventure
           </span>
         </h1>
         <div>
@@ -161,7 +161,7 @@ class Intro extends Component {
             <br />
             ↓<br />
             <em>Keep reading or<br />
-            <a href='#explore'>Explore adventure</a></em><br />
+            <a href='#explore'>Get exploring</a></em><br />
           </span>
         </div>
       </div>
