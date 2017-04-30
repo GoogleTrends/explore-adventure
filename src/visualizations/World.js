@@ -91,7 +91,7 @@ class World extends Component {
       .attr('text-anchor', 'middle')
       .attr('dy', '.35em')
       .attr('font-size', fontSize + 2)
-      .style('font-family', 'Libre Baskerville')
+      .style('font-family', 'Courier')
       .text('Countries that search for ' + this.props.topic);
 
     var padding = 4;
