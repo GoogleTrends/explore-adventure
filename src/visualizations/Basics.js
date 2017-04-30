@@ -3,6 +3,7 @@ import _ from 'lodash';
 import * as d3 from 'd3';
 import {TimelineMax} from 'gsap';
 import {annotation, annotationXYThreshold} from 'd3-svg-annotation';
+import movie from '../images/basics.mp4';
 
 var duration = 1;
 var blockSize = 20;
@@ -27,12 +28,16 @@ class Basics extends Component {
   }
 
   componentWillMount() {
+    if (this.props.isMobilePhone) {
+      return;
+    }
+
     var y = 0;
     var perRow = Math.floor((this.props.width - 2 * textWidth) / smallBlockSize);
-    if (this.props.isMobilePhone) {
-      smallBlockSize = 10;
-      perRow = Math.floor((this.props.width - textWidth) / smallBlockSize);
-    }
+    // if (this.props.isMobilePhone) {
+    //   smallBlockSize = 10;
+    //   perRow = Math.floor((this.props.width - textWidth) / smallBlockSize);
+    // }
 
     this.blocksData = _.map(this.props.intros.categories, (category, i) => {
       var numRows = Math.ceil(category.count / perRow);
@@ -96,6 +101,10 @@ class Basics extends Component {
   }
 
   componentDidMount() {
+    if (this.props.isMobilePhone) {
+      return;
+    }
+
     this.container = d3.select(this.refs.svg)
       .attr('width', this.props.width)
       .attr('height', this.height)
@@ -370,6 +379,10 @@ class Basics extends Component {
   }
 
   render() {
+    if (this.props.isMobilePhone) {
+      return (<video src={movie} width={this.props.width} controls autoPlay={true} loop={true} />)
+    }
+
     var svgStyle = {
       overflow: 'visible',
       paddingTop: fontSize,
