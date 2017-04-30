@@ -18,6 +18,7 @@
     "remarkable": "^1.7.1",
     "topojson-client": "^2.1.0"
   },
+  "homepage": "http://googletrends.github.io/explore-adventure",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
