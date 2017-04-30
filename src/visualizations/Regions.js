@@ -245,8 +245,8 @@ class Regions extends Component {
       .attr('opacity', 0)
       .merge(this.blocks)
       .attr('fill', d => d.color)
-      .on('mousemove', !this.props.isMobilePhone ? this.hoverBlock : null)
-      .on('mouseleave', () => !this.props.isMobilePhone ? this.hoverBlock() : null);
+      .on('mousemove', !this.props.isMobileAny ? this.hoverBlock : null)
+      .on('mouseleave', () => !this.props.isMobileAny ? this.hoverBlock() : null);
   }
 
   prepareAnimation() {

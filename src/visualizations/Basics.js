@@ -61,7 +61,7 @@ class Basics extends Component {
       note: {
         title: "Topics",
         label: 'these represent every search the U.S. made across the years',
-        wrap: this.props.width * (!this.props.isMobilePhone ? 0.3 : 0.4),
+        wrap: this.props.width * (!this.props.isMobileAny ? 0.3 : 0.4),
         lineType: 'vertical',
         align: 'middle',
         padding: spacing,
@@ -81,7 +81,7 @@ class Basics extends Component {
       note: {
         title: "Categories",
         label: 'each topic is colored by its category',
-        wrap: this.props.width * (!this.props.isMobilePhone ? 0.35 : 0.45),
+        wrap: this.props.width * (!this.props.isMobileAny ? 0.35 : 0.45),
         lineType: 'vertical',
         align: 'middle',
         padding: spacing,

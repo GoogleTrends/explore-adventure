@@ -334,7 +334,7 @@ class RegionIntro extends Component {
 
   animateSceneThree(dimensions) {
     var {width, height} = dimensions;
-    var wrap = this.props.width * (!this.props.isMobilePhone ? 0.25 : 0.4);
+    var wrap = this.props.width * (!this.props.isMobileAny ? 0.25 : 0.4);
     // get the tallest country and its region
     var region, country;
     var seasonMax = 0;
@@ -447,7 +447,7 @@ class RegionIntro extends Component {
 
     var offset = 2;
     var legendX = width / 2 - blockSize / 2;
-    var numLegendBlocks = !this.props.isMobilePhone ? 10 : 6;
+    var numLegendBlocks = !this.props.isMobileAny ? 10 : 6;
     var legendWidth = numLegendBlocks * blockSize;
     var annotations = [{
       note: {

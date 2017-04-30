@@ -110,7 +110,7 @@ class LineCharts extends Component {
 
     var colored = this.props.years.length % 2 === 1 ? 0 : 1;
     enter
-      .filter((d, i) => !this.props.isMobilePhone || i % 2 === colored)
+      .filter((d, i) => !this.props.isMobileAny || i % 2 === colored)
       .append('text')
       .attr('y', topicHeight - fontSize * 0.75)
       .attr('text-anchor', 'middle')
@@ -127,7 +127,7 @@ class LineCharts extends Component {
     years.select('text')
       .attr('x', d => d.width / 2)
       .attr('fill', this.props.color)
-      .text(d => !this.props.isMobilePhone ? d.year : "'" + (d.year + '').slice(2));
+      .text(d => !this.props.isMobileAny ? d.year : "'" + (d.year + '').slice(2));
   }
 
   renderAnnotations() {
@@ -139,7 +139,7 @@ class LineCharts extends Component {
     annotations.exit().remove();
     annotations.enter().append('circle')
       .classed('annotation', true)
-      .attr('r', !this.props.isMobilePhone ? 20 : 10)
+      .attr('r', !this.props.isMobileAny ? 20 : 10)
       .attr('stroke-dasharray', '5 2')
       .attr('fill', 'none')
       .attr('stroke', this.props.colors.gray)

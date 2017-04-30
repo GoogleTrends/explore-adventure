@@ -26,12 +26,14 @@ var colors = {
   gray: '#333',
 };
 
-var isMobilePhone = isMobile.any;
+var isMobileAny = isMobile.any;
+var isMobilePhone = isMobile.phone;
+var isMobileTablet = isMobile.tablet;
 var margin = {top: 20, left: 20};
-var width = !isMobilePhone ? 1000 : window.innerWidth - 2 * margin.left;
-var svgWidth = !isMobilePhone ? width * 0.7 : width;
-var imgWidth = !isMobilePhone ? width * 0.3 : width;
-var contentWidth = !isMobilePhone ? width * 0.6 : width;
+var width = !isMobileAny ? 1000 : window.innerWidth - 2 * margin.left;
+var svgWidth = !isMobileAny ? width * 0.7 : width;
+var imgWidth = !isMobileAny ? width * 0.3 : width;
+var contentWidth = !isMobileAny ? width * 0.6 : width;
 var dotSize = 9;
 var url = 'http://104.198.104.144';
 var md = new Remarkable({linkTarget: '_new', html: true});
@@ -480,13 +482,13 @@ Loading...
     };
     var footerStyle = {
       display: 'inline-block',
-      maxWidth: !isMobilePhone ? width / 3 : width,
-      width: !isMobilePhone ? 'auto' : width,
+      maxWidth: !isMobileAny ? width / 3 : width,
+      width: !isMobileAny ? 'auto' : width,
       margin: 'auto',
       textAlign: 'left',
       lineHeight: 2,
       fontSize: 12,
-      padding: !isMobilePhone ? '80px 0 80px 40px' : 0,
+      padding: !isMobileAny ? '80px 0 80px 40px' : 0,
       verticalAlign: 'top',
     };
     var props = {
@@ -497,7 +499,7 @@ Loading...
       clearTarget: this.clearTarget,
       selectCategories: this.selectCategories,
       selectSeason: this.selectSeason,
-      isMobilePhone,
+      isMobileAny, isMobilePhone, isMobileTablet,
     };
 
     return (

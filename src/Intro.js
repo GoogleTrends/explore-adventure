@@ -34,7 +34,7 @@ class Intro extends Component {
 
   componentDidMount() {
     // if mobile, don't animate the topics
-    if (this.props.isMobilePhone) return;
+    if (this.props.isMobileAny) return;
 
     this.hidden = d3.select(this.refs.hidden);
     _.times(this.topics.length, i => {
@@ -75,9 +75,9 @@ class Intro extends Component {
       color: '#fff',
       backgroundColor: this.props.colors.blue,
       backgroundImage: 'url("' + airplane_img + '")',
-      backgroundSize: !this.props.isMobilePhone ? '1000px' : '500px',
-      backgroundPosition: !this.props.isMobilePhone ? '' :  'center 360px',
-      backgroundRepeat: !this.props.isMobilePhone ? '' : 'no-repeat',
+      backgroundSize: !this.props.isMobileAny ? '1000px' : '500px',
+      backgroundPosition: !this.props.isMobileAny ? '' :  'center 360px',
+      backgroundRepeat: !this.props.isMobileAny ? '' : 'no-repeat',
       // boxShadow: '0 0 10px #cfcfcf',
     };
     var animateDivStyle = {
@@ -126,7 +126,7 @@ class Intro extends Component {
     }
 
     var animateDiv = null;
-    if (!this.props.isMobilePhone) {
+    if (!this.props.isMobileAny) {
       animateDiv = (
         <div style={animateDivStyle}>
           <div style={animateStyle} ref='animate2' />
