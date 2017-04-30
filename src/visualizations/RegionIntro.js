@@ -3,6 +3,7 @@ import _ from 'lodash';
 import * as d3 from 'd3';
 import {TimelineMax} from 'gsap';
 import {annotation, annotationCallout, annotationXYThreshold} from 'd3-svg-annotation';
+import movie from '../images/regions.mp4';
 
 var duration = 1;
 var perDuration = 0.005;
@@ -30,6 +31,10 @@ class RegionIntro extends Component {
   }
 
   componentDidMount() {
+    if (this.props.isMobilePhone) {
+      return;
+    }
+
     this.svg = d3.select(this.refs.svg);
     this.container = this.svg.append('g')
       .attr('transform', 'translate(' + [0, 3 * margin.top] + ')');
@@ -540,6 +545,10 @@ class RegionIntro extends Component {
   }
 
   render() {
+    if (this.props.isMobilePhone) {
+      return (<video src={movie} width={this.props.width} controls autoPlay={true} loop={true} />)
+    }
+
     var svgStyle = {overflow: 'visible', paddingTop: fontSize};
 
     return (
