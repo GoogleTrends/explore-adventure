@@ -35,7 +35,7 @@ var svgWidth = !isMobileAny ? width * 0.7 : width;
 var imgWidth = !isMobileAny ? width * 0.3 : width;
 var contentWidth = !isMobileAny ? width * 0.6 : width;
 var dotSize = 9;
-var url = 'http://35.185.209.202/';
+var url = 'http://104.199.113.19/';
 var md = new Remarkable({linkTarget: '_new', html: true});
 
 class App extends Component {
